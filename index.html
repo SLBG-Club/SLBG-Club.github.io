@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>South Leeds Board Gamers</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css">
+</head>
+
+<body>
+  <div id="banner">
+    Update as of <span id="current_date"></span> we are running as normal! Come on down :)
+  </div>
+  <div id="flex">
+    <div id="wrapper">
+      <h1>
+        South Leeds<br /> Board Gamers
+      </h1>
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img class="slide_img" src="./img/slide_1.jpg"></li>
+            <li class="splide__slide"><img class="slide_img" src="./img/slide_2.jpg"></li>
+            <li class="splide__slide"><img class="slide_img" src="./img/slide_3.jpg"></li>
+            <li class="splide__slide"><img class="slide_img" src="./img/slide_4.jpg"></li>
+            <li class="splide__slide"><img class="slide_img" src="./img/slide_5.jpg"></li>
+          </ul>
+        </div>
+        <div class="splide__progress">
+          <div class="splide__progress__bar">
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h3>About</h3>
+        <p>South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, playing everything
+          from euro
+          to war games and anything in-between.</p>
+        <p>We invite players of all experiences to discover this wonderful hobby
+          and make
+          lasting friends along the way. Players can either bring their own games or play one of the many games members
+          bring and
+          just jump in - we're always more than happy to teach!</p>
+        </p>
+      </div>
+      <div class="content">
+        <h3>Get Involved</h3>
+        <p>
+          We meet between 7pm and 11pm, weekly at Bruntcliffe Working Men's Club in Morley. The venue has both parking
+          and a bar
+          for drinks on site. Including a takeaway round the corner if you get hungry.
+        </p>
+        <p>The best way to keep up to date and is to <a href="https://www.facebook.com/groups/southleedsboardgamers"
+            target="_blank">join our Facebook Group</a> for regular updates and events.</p>
+      </div>
+      <div class="content">
+        <h3>Find Us</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.550001490726!2d-1.625848683453437!3d53.74408898006431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795fc4401f7633%3A0x7719bf030ecbaf91!2sBruntcliffe%20Working%20Mens%20Club!5e0!3m2!1sen!2suk!4v1626277584187!5m2!1sen!2suk"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p>
+          Address:<br>
+          <i>Bruntcliffe Working Men's Club<br>Bruntcliffe Road<br>Morley<br>Leeds<br>LS27 0LQ</i>
+        </p>
+      </div>
+      <div class="content center">
+        <a href="https://boardgamegeek.com/guild/3919" target="_blank"><img class="logo" src="./img/bgg.jpg"></a>
+        <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank"><img class="logo"
+            src="./img/facebook.png"></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("current_date").innerHTML = new Date().toJSON().slice(0, 10).split('-').reverse().join('/');
+      var splide = new Splide('.splide', { type: 'loop', autoplay: true });
+      splide.mount();
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+</body>
+
+</html>
