@@ -1,11 +1,12 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
 }
 
-body { 
-  font-family: 'Quicksand', sans-serif;
-  background-color: #FAF9F6;
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #faf9f6;
   color: #3f3f3f;
 }
 
@@ -16,7 +17,7 @@ body {
   text-align: center;
   box-sizing: border-box;
   padding: 15px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .slide_img {
@@ -35,7 +36,8 @@ body {
   width: 790px;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -102,7 +104,15 @@ h3:first-of-type {
   height: 450px;
 }
 
+.mobile_break {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
+  .mobile_break {
+    display: block;
+  }
+
   #wrapper {
     width: 95%;
   }
@@ -113,7 +123,7 @@ h3:first-of-type {
   }
 
   .slide_img {
-    height: 300px
+    height: 300px;
   }
 
   h1 {
