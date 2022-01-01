@@ -96,15 +96,19 @@
     </div>
   </div>
   <script>
-    var closestTuesday = () => {
-      var currDate = new Date();
-      var tuesday = currDate.getTime() + (9 - currDate.getDay()) * 8.64e+7;
-      return new Date(tuesday).toJSON().slice(0, 10).split('-').reverse().join('/');
+    let formatDate = date => {
+      return date.toJSON().slice(0, 10).split('-').reverse().join('/');
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    let closestTuesday = () => {
+      let currDate = new Date();
+      currDate.setDate(currDate.getDate() + (9 - currDate.getDay()) % 7);
+      return formatDate(currDate);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("next_tuesday").innerHTML = closestTuesday();
-      var splide = new Splide('.splide', { type: 'loop', autoplay: true });
+      let splide = new Splide('.splide', { type: 'loop', autoplay: true });
       splide.mount();
     });
   </script>
