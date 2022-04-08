@@ -138,6 +138,10 @@ h3:first-of-type {
 }
 
 @media only screen and (max-width: 800px) {
+  .club-logo {
+    width: 50%;
+  }
+
   .mobile_break {
     display: block;
   }
