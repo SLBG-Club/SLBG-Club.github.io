@@ -5,6 +5,7 @@ body {
 }
 
 body {
+  border-top: 5px solid #228FA3;
   font-family: "Quicksand", sans-serif;
   background-color: #faf9f6;
   color: #3f3f3f;
@@ -41,12 +42,20 @@ a:active {
 
 #next_event {
   width: 100%;
-  background-color: #93ee93;
+  background-color: #228FA3;
+  color: #fff;
   text-align: center;
   box-sizing: border-box;
   padding: 15px;
   border-radius: 3px;
   margin-bottom: 1rem;
+}
+
+#next_event a:link,
+#next_event a:visited,
+#next_event a:hover,
+#next_event a:active {
+  color: #fff;
 }
 
 .slide_img {
