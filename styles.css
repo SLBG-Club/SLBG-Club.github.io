@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  border-top: 5px solid #228FA3;
+  border-top: 5px solid #228fa3;
   font-family: "Quicksand", sans-serif;
   background-color: #faf9f6;
   color: #3f3f3f;
@@ -22,7 +22,7 @@ body {
 }
 
 .club-logo {
-  width: 35%;
+  width: 50%;
   height: auto;
   image-rendering: crisp-edges;
 }
@@ -42,7 +42,7 @@ a:active {
 
 #next_event {
   width: 100%;
-  background-color: #228FA3;
+  background-color: #228fa3;
   color: #fff;
   text-align: center;
   box-sizing: border-box;
