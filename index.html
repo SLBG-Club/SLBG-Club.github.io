@@ -11,8 +11,27 @@
   <meta name="author" content="South Leeds Board Gamers - Leed's No.1 Board Game Group!">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="board games, tabletop games, Leeds, Morley, South Leeds, gaming club, board game club, weekly meetup, euro games, war games">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.slbg.club/">
+  <meta property="og:title" content="South Leeds Board Gamers">
+  <meta property="og:description" content="Join our friendly community of board game enthusiasts! Weekly game nights every Tuesday 7pm-11pm in Morley, Leeds. All experience levels welcome.">
+  <meta property="og:image" content="https://www.slbg.club/img/logo.png">
+  <meta property="og:locale" content="en_GB">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.slbg.club/">
+  <meta property="twitter:title" content="South Leeds Board Gamers">
+  <meta property="twitter:description" content="Join our friendly community of board game enthusiasts! Weekly game nights every Tuesday 7pm-11pm in Morley, Leeds.">
+  <meta property="twitter:image" content="https://www.slbg.club/img/logo.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.slbg.club/">
 
-  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" href="./fav.png">
   <link rel="stylesheet" href="styles.css?v=2.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +53,11 @@
       <div class="splide">
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide"><img class="slide_img" alt="Cosmic Frog" src="./img/slide_1.jpg"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Cry Havoc" src="./img/slide_2.jpg"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Terraforming Mars" src="./img/slide_3.jpg"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Daimyo" src="./img/slide_4.jpg"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Flamme Rouge" src="./img/slide_5.jpg"></li>
+            <li class="splide__slide"><img class="slide_img" alt="Cosmic Frog board game in play" src="./img/slide_1.jpg" loading="lazy" width="790" height="400"></li>
+            <li class="splide__slide"><img class="slide_img" alt="Cry Havoc board game setup" src="./img/slide_2.jpg" loading="lazy" width="790" height="400"></li>
+            <li class="splide__slide"><img class="slide_img" alt="Terraforming Mars game in progress" src="./img/slide_3.jpg" loading="lazy" width="790" height="400"></li>
+            <li class="splide__slide"><img class="slide_img" alt="Daimyo board game on table" src="./img/slide_4.jpg" loading="lazy" width="790" height="400"></li>
+            <li class="splide__slide"><img class="slide_img" alt="Flamme Rouge cycling board game" src="./img/slide_5.jpg" loading="lazy" width="790" height="400"></li>
           </ul>
         </div>
         <div class="splide__progress">
@@ -46,6 +65,7 @@
           </div>
         </div>
       </div>
+      <h1 class="visually-hidden">South Leeds Board Gamers - Weekly Board Game Club in Morley, Leeds</h1>
       <div class="content">
         <h3>📣 About</h3>
         <p>South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, playing
@@ -86,11 +106,11 @@
         <p><a href="https://w3w.co/moon.smart.offers" target="_blank">///moon.smart.offers</a></p>
       </div>
       <div class="content center">
-        <a href="https://boardgamegeek.com/guild/3919" target="_blank"><img class="logo" alt="BGG Icon"
+        <a href="https://boardgamegeek.com/guild/3919" target="_blank" hreflang="en"><img class="logo" alt="BoardGameGeek Icon"
             src="./img/bgg.jpg"></a>
-        <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank"><img class="logo"
+        <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" hreflang="en"><img class="logo"
             alt="Facebook Icon" src="./img/facebook.png"></a>
-        <a href="https://discord.gg/vEvyCPNguJ" target="_blank"><img class="logo" alt="Discord Icon"
+        <a href="https://discord.gg/vEvyCPNguJ" target="_blank" hreflang="en"><img class="logo" alt="Discord Icon"
             src="./img/discord.png"></a>
       </div>
     </div>
@@ -113,6 +133,62 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+  
+  <!-- Structured Data for Local Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "South Leeds Board Gamers",
+    "alternateName": "SLBG",
+    "url": "https://www.slbg.club/",
+    "logo": "https://www.slbg.club/img/logo.png",
+    "description": "South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, meeting every week in Morley, Leeds.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bruntcliffe Working Men's Club, Bruntcliffe Road",
+      "addressLocality": "Morley",
+      "addressRegion": "Leeds",
+      "postalCode": "LS27 0LQ",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.744088,
+      "longitude": -1.625849
+    },
+    "sameAs": [
+      "https://www.facebook.com/groups/southleedsboardgamers",
+      "https://boardgamegeek.com/guild/3919",
+      "https://discord.gg/vEvyCPNguJ"
+    ],
+    "event": {
+      "@type": "Event",
+      "name": "Weekly Board Game Night",
+      "startTime": "19:00",
+      "endTime": "23:00",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Tuesday",
+        "repeatFrequency": "P1W"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Bruntcliffe Working Men's Club",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bruntcliffe Road",
+          "addressLocality": "Morley",
+          "addressRegion": "Leeds",
+          "postalCode": "LS27 0LQ",
+          "addressCountry": "GB"
+        }
+      },
+      "description": "Free weekly board game night - all experience levels welcome",
+      "isAccessibleForFree": true
+    }
+  }
+  </script>
 </body>
 
 </html>
