@@ -41,7 +41,7 @@ body {
 .club-logo {
   width: 50%;
   height: auto;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 a:link,
@@ -89,6 +89,11 @@ select:focus {
 #next_event a:hover,
 #next_event a:active {
   color: #fff;
+}
+
+.splide {
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .slide_img {
