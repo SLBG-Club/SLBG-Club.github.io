@@ -7,12 +7,13 @@
 
   <title>South Leeds Board Gamers</title>
   <meta name="description"
-    content="South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, meeting every week in Morley, Leeds.">
+    content="Join our friendly community of board game enthusiasts! Weekly game nights every Tuesday 7pm-11pm in Morley, Leeds. All experience levels welcome.">
   <meta name="author" content="South Leeds Board Gamers - Leed's No.1 Board Game Group!">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#228fa3">
   <meta name="keywords" content="board games, tabletop games, Leeds, Morley, South Leeds, gaming club, board game club, weekly meetup, euro games, war games">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.slbg.club/">
@@ -20,107 +21,184 @@
   <meta property="og:description" content="Join our friendly community of board game enthusiasts! Weekly game nights every Tuesday 7pm-11pm in Morley, Leeds. All experience levels welcome.">
   <meta property="og:image" content="https://www.slbg.club/img/logo.png">
   <meta property="og:locale" content="en_GB">
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.slbg.club/">
   <meta property="twitter:title" content="South Leeds Board Gamers">
   <meta property="twitter:description" content="Join our friendly community of board game enthusiasts! Weekly game nights every Tuesday 7pm-11pm in Morley, Leeds.">
   <meta property="twitter:image" content="https://www.slbg.club/img/logo.png">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.slbg.club/">
 
   <link rel="icon" type="image/png" href="./fav.png">
-  <link rel="stylesheet" href="styles.css?v=2.0">
+  <link rel="stylesheet" href="styles.css?v=29.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="flex">
-    <div id="wrapper">
-      <div class="club-logo-wrapper">
-        <img src="img/logo.png" class="club-logo" alt="South Leeds Board Gamers Logo" />
-      </div>
-      <div id="next_event">📅
-        <b>Upcoming Event:</b><br class="mobile_break"> <a
-          href="https://www.facebook.com/groups/southleedsboardgamers/events" target="_blank"><span
-            id="next_tuesday"></span>, 7pm - 11pm, Game Night</a>
-      </div>
-      <div class="splide" aria-label="Board game photos carousel">
-        <div class="splide__track">
-          <ul class="splide__list" role="list">
-            <li class="splide__slide"><img class="slide_img" alt="Board game night at South Leeds Board Gamers" src="./img/slide_1.jpeg" loading="lazy" width="790" height="400"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Players enjoying board games at our weekly meetup" src="./img/slide_2.jpeg" loading="lazy" width="790" height="400"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Board games in action at SLBG" src="./img/slide_3.jpeg" loading="lazy" width="790" height="400"></li>
-            <li class="splide__slide"><img class="slide_img" alt="Gaming session at South Leeds Board Gamers" src="./img/slide_4.jpeg" loading="lazy" width="790" height="400"></li>
-          </ul>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand" aria-label="South Leeds Board Gamers home">
+        <img src="img/icon.png" alt="South Leeds Board Gamers Logo">
+        <span>South Leeds Board Gamers</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#first-time">First Time</a>
+        <a href="#find-us">Find Us</a>
+        <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" class="nav-cta">Join Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <span id="top"></span>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="hero-heading">Leeds' friendliest<br>board game club!</h1>
+        <div class="hero-event"><i data-lucide="calendar-days" class="icon"></i> Next game night: <strong><span id="next_tuesday"></span>, 7pm–11pm</strong></div>
+        <div class="hero-actions">
+          <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" class="btn btn-primary">Join the Group</a>
+          <a href="#find-us" class="btn btn-ghost">Find us</a>
         </div>
-        <div class="splide__progress">
-          <div class="splide__progress__bar">
-          </div>
+      </div>
+    </section>
+
+    <!-- ===== Tagline ===== -->
+    <section class="tagline" aria-label="Club tagline">
+      <p>Free weekly game nights in Morley. All games, all experience levels, all welcome.</p>
+    </section>
+
+    <!-- ===== Stats strip ===== -->
+    <section class="stats" aria-label="Club highlights">
+      <div class="stats-inner">
+        <div class="stat"><span class="stat-num">Weekly</span><span class="stat-label">Every Tuesday night</span></div>
+        <div class="stat"><span class="stat-num">7–11pm</span><span class="stat-label">Doors open all evening</span></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">No membership fees</span></div>
+        <div class="stat"><span class="stat-num">Est. 2021</span><span class="stat-label">Morley, Leeds</span></div>
+      </div>
+    </section>
+
+    <!-- ===== About + First Time ===== -->
+    <section class="band" id="about" aria-labelledby="about-heading">
+      <div class="band-inner feature-grid">
+        <div class="feature">
+          <h2 id="about-heading"><i data-lucide="megaphone" class="icon"></i> About the club</h2>
+          <p>South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, playing
+            everything from euro to war games and anything in-between. We welcome players from all backgrounds who are
+            looking to connect and make lasting friendships with other like-minded hobbyists.</p>
+          <p>If you're familiar with the likes of Catan, Ticket to Ride or indeed heavier games you'll fit right in.
+            Our members all have collections of their own, so you can either just turn up and play or bring your own
+            games. The choice is yours!</p>
+        </div>
+        <div class="feature" id="first-time">
+          <h2><i data-lucide="sparkles" class="icon"></i> First time?</h2>
+          <p>Members don't need to bring anything. Plenty of our members bring games and are happy to teach. As long
+            as you have some enthusiasm and interest, that's all that's necessary.</p>
+          <p>Just turn up on a Tuesday evening and we'll help you find a game to sit down with. There's no need to
+            pre-organise anything. We play a wide variety of games of different weights to suit a range of players in a
+            friendly atmosphere.</p>
         </div>
       </div>
-      <h1 class="visually-hidden">South Leeds Board Gamers - Weekly Board Game Club in Morley, Leeds</h1>
-      <div class="content" id="main-content">
-        <h3>📣 About</h3>
-        <p>South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, playing
-          everything from euro to war games and anything in-between. We welcome players from all backgrounds who are
-          looking to connect and make lasting friendships with other like minded hobbyists.</p>
-        <p>If you are familiar with the likes of Catan, Ticket
-          to Ride or indeed heavier games you will fit right in. Our members all have collections of their own,
-          so you can either just turn up and play or bring your own games - the choice is yours!</p>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="band band-tint" aria-labelledby="gallery-heading">
+      <div class="band-inner">
+        <h2 id="gallery-heading" class="section-title">Game nights in action</h2>
+        <div class="gallery">
+          <img class="gallery-img" alt="Board game night at South Leeds Board Gamers" src="./img/slide_1.jpeg" loading="lazy">
+          <img class="gallery-img" alt="A colourful strategy board game mid-play at SLBG" src="./img/edora.jpg" loading="lazy">
+          <img class="gallery-img" alt="An industrial economic board game in full swing at SLBG" src="./img/brass.jpg" loading="lazy">
+          <img class="gallery-img" alt="Players enjoying board games at our weekly meetup" src="./img/slide_2.jpeg" loading="lazy">
+          <img class="gallery-img" alt="A detailed Euro-style board game in progress" src="./img/game.jpg" loading="lazy">
+          <img class="gallery-img" alt="Players around a space-themed card game at SLBG" src="./img/club.jpg" loading="lazy">
+          <img class="gallery-img" alt="Board games in action at SLBG" src="./img/slide_3.jpeg" loading="lazy">
+          <img class="gallery-img" alt="Players around a space-themed board game" src="./img/seti.jpg" loading="lazy">
+          <img class="gallery-img" alt="Gaming session at South Leeds Board Gamers" src="./img/slide_4.jpeg" loading="lazy">
+        </div>
       </div>
-      <div class="content">
-        <h3>🎲 Get Involved</h3>
-        <p>
-          Our weekly game night is free to attend and runs from <b>7pm to 11pm, every Tuesday</b> at
-          Bruntcliffe Working Men's Club in Morley. The venue has
-          both parking and a bar serving drinks. Including a takeaway round the corner if you get hungry.
-        </p>
-        <p>We also run regular all day game-day events, pulling in gamers from across the region, with upwards of
-          100+ attendees our game day events are not to be missed.</p>
+    </section>
+
+    <!-- ===== Get Involved ===== -->
+    <section class="band" id="involved" aria-labelledby="involved-heading">
+      <div class="band-inner narrow">
+        <h2 id="involved-heading" class="section-title"><i data-lucide="dices" class="icon"></i> Get involved</h2>
+        <p>Our weekly game night is <b>free to attend</b> and runs from <b>7pm to 11pm, every Tuesday</b> at
+          Bruntcliffe Working Men's Club in Morley. The venue has both parking and a bar serving drinks, plus a
+          takeaway round the corner if you get hungry.</p>
+        <p>We also run regular all-day game-day events, pulling in gamers from across the region. With upwards of
+          100+ attendees, our game day events are not to be missed.</p>
         <p>The best way to keep up to date is to <a href="https://www.facebook.com/groups/southleedsboardgamers"
-            target="_blank">join our Facebook Group</a> for regular news and events. You can also <a
-            href="https://boardgamegeek.com/guild/3919" target="_blank">join our guild</a> over on
-          BoardGameGeek and check out members collections or if you just fancy having a chat, you can <a
-            href="https://discord.gg/vEvyCPNguJ" target="_blank">join us on Discord.</a>
-        </p>
+            target="_blank" rel="noopener">join our Facebook Group</a> for regular news and events. You can also <a
+            href="https://boardgamegeek.com/guild/3919" target="_blank" rel="noopener">join our guild</a> over on
+          BoardGameGeek and check out members' collections, or if you just fancy a chat, <a
+            href="https://discord.gg/vEvyCPNguJ" target="_blank" rel="noopener">join us on Discord.</a></p>
       </div>
-      <div class="content">
-        <h3>🎯 First Time?</h3>
-        <p>Members don't need to bring anything. Plenty of our members bring games and are happy to teach. As long as you have some enthusiasm and interest, that's all that is necessary.</p>
-        <p>All you have to do is turn up on a Tuesday evening and we will help you find a game to sit down with. You don't need to pre-organise anything. We play a wide variety of games of different weights to suit a range of different players in a friendly atmosphere.</p>
-      </div>
-      <div class="content">
-        <h3>🗺️ Find Us</h3>
+    </section>
+
+    <!-- ===== Find Us ===== -->
+    <section class="band band-tint" id="find-us" aria-labelledby="find-heading">
+      <div class="band-inner find-grid">
         <div class="map_wrapper">
-          <iframe
+          <iframe title="Map to Bruntcliffe Working Men's Club"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.550001490726!2d-1.625848683453437!3d53.74408898006431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795fc4401f7633%3A0x7719bf030ecbaf91!2sBruntcliffe%20Working%20Mens%20Club!5e0!3m2!1sen!2suk!4v1626277584187!5m2!1sen!2suk"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          <p>
         </div>
-        <p>
-          <b>When:</b> Every Tuesday, 7pm - 11pm<br><br>
-          <b>Address:</b><br>
-          Bruntcliffe Working Men's Club<br>Bruntcliffe Road<br>Morley<br>Leeds<br>LS27 0LQ
-        </p>
-        <p><a href="https://w3w.co/moon.smart.offers" target="_blank">///moon.smart.offers</a></p>
+        <div class="find-details">
+          <h2 id="find-heading"><i data-lucide="map-pin" class="icon"></i> Find us</h2>
+          <p><b>When:</b><br>Every Tuesday, 7pm – 11pm</p>
+          <p><b>Address:</b><br>
+            Bruntcliffe Working Men's Club<br>Bruntcliffe Road<br>Morley<br>Leeds<br>LS27 0LQ</p>
+          <p><a href="https://w3w.co/moon.smart.offers" target="_blank" rel="noopener">///moon.smart.offers</a></p>
+        </div>
       </div>
-      <div class="content center">
-        <a href="https://boardgamegeek.com/guild/3919" target="_blank" hreflang="en"><img class="logo" alt="BoardGameGeek Icon"
-            src="./img/bgg.jpg"></a>
-        <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" hreflang="en"><img class="logo"
-            alt="Facebook Icon" src="./img/facebook.png"></a>
-        <a href="https://discord.gg/vEvyCPNguJ" target="_blank" hreflang="en"><img class="logo" alt="Discord Icon"
-            src="./img/discord.png"></a>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/icon.png" alt="South Leeds Board Gamers Logo">
+        <p>Leeds' No.1 board game group, meeting every week in Morley since 2021.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <a href="#about">About</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#first-time">First Time</a>
+        <a href="#find-us">Find Us</a>
+      </div>
+      <div class="footer-links">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://boardgamegeek.com/guild/3919" target="_blank" rel="noopener" hreflang="en" aria-label="BoardGameGeek guild"><img class="logo" alt="BoardGameGeek Icon" src="./img/bgg.jpg"></a>
+          <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" hreflang="en" aria-label="Facebook group"><img class="logo" alt="Facebook Icon" src="./img/facebook.png"></a>
+          <a href="https://discord.gg/vEvyCPNguJ" target="_blank" rel="noopener" hreflang="en" aria-label="Discord server"><img class="logo" alt="Discord Icon" src="./img/discord.png"></a>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> South Leeds Board Gamers · Morley, Leeds
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script>
     let formatDate = date => {
       return date.toJSON().slice(0, 10).split('-').reverse().join('/');
@@ -134,12 +212,31 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("next_tuesday").innerHTML = closestTuesday();
-      let splide = new Splide('.splide', { type: 'loop', autoplay: true });
-      splide.mount();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Render Lucide icons
+      lucide.createIcons();
+
+      // Mobile nav toggle
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+
+      // Shadow on nav once scrolled
+      const header = document.querySelector('.site-nav');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
-  
+
   <!-- Structured Data for Local Organization -->
   <script type="application/ld+json">
   {
