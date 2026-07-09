@@ -33,10 +33,10 @@
   <link rel="canonical" href="https://www.slbg.club/">
 
   <link rel="icon" type="image/png" href="./fav.png">
-  <link rel="stylesheet" href="styles.css?v=29.0">
+  <link rel="stylesheet" href="styles.css?v=30.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -57,6 +57,7 @@
         <a href="#involved">Get Involved</a>
         <a href="#first-time">First Time</a>
         <a href="#find-us">Find Us</a>
+        <a href="#faq">FAQ</a>
         <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" class="nav-cta">Join Us</a>
       </nav>
     </div>
@@ -67,25 +68,30 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1 id="hero-heading">Leeds' friendliest<br>board game club!</h1>
-        <div class="hero-event"><i data-lucide="calendar-days" class="icon"></i> Next game night: <strong><span id="next_tuesday"></span>, 7pm–11pm</strong></div>
-        <div class="hero-actions">
-          <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" class="btn btn-primary">Join the Group</a>
-          <a href="#find-us" class="btn btn-ghost">Find us</a>
+      <div class="section-inner split">
+        <div class="split-copy">
+          <p class="eyebrow"><i data-lucide="calendar-days" class="icon"></i> Every Tuesday · Morley, Leeds</p>
+          <h1 id="hero-heading">Leeds' friendliest <span class="accent">board&nbsp;game club</span></h1>
+          <p class="hero-sub">Free weekly game nights in Morley. All games, all experience levels, all welcome.</p>
+          <p class="hero-event">Next game night: <strong><span id="next_tuesday"></span>, 7pm–11pm</strong></p>
+          <div class="hero-actions">
+            <a href="#find-us" class="btn btn-primary">Find us</a>
+            <div class="hero-social">
+              <a href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener" aria-label="Facebook group"><img alt="Facebook Icon" src="./img/facebook.png"></a>
+              <a href="https://boardgamegeek.com/guild/3919" target="_blank" rel="noopener" aria-label="BoardGameGeek guild"><img alt="BoardGameGeek Icon" src="./img/bgg.jpg"></a>
+              <a href="https://discord.gg/vEvyCPNguJ" target="_blank" rel="noopener" aria-label="Discord server"><img alt="Discord Icon" src="./img/discord.png"></a>
+            </div>
+          </div>
+        </div>
+        <div class="split-media">
+          <img src="img/slide_1.jpeg" alt="Members playing board games at a South Leeds Board Gamers game night" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <!-- ===== Tagline ===== -->
-    <section class="tagline" aria-label="Club tagline">
-      <p>Free weekly game nights in Morley. All games, all experience levels, all welcome.</p>
-    </section>
-
     <!-- ===== Stats strip ===== -->
     <section class="stats" aria-label="Club highlights">
-      <div class="stats-inner">
+      <div class="section-inner stats-inner">
         <div class="stat"><span class="stat-num">Weekly</span><span class="stat-label">Every Tuesday night</span></div>
         <div class="stat"><span class="stat-num">7–11pm</span><span class="stat-label">Doors open all evening</span></div>
         <div class="stat"><span class="stat-num">Free</span><span class="stat-label">No membership fees</span></div>
@@ -93,11 +99,12 @@
       </div>
     </section>
 
-    <!-- ===== About + First Time ===== -->
-    <section class="band" id="about" aria-labelledby="about-heading">
-      <div class="band-inner feature-grid">
-        <div class="feature">
-          <h2 id="about-heading"><i data-lucide="megaphone" class="icon"></i> About the club</h2>
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section-inner split">
+        <div class="split-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-heading">A friendly community of tabletop enthusiasts</h2>
           <p>South Leeds Board Gamers are a friendly community of board and tabletop game enthusiasts, playing
             everything from euro to war games and anything in-between. We welcome players from all backgrounds who are
             looking to connect and make lasting friendships with other like-minded hobbyists.</p>
@@ -105,25 +112,36 @@
             Our members all have collections of their own, so you can either just turn up and play or bring your own
             games. The choice is yours!</p>
         </div>
-        <div class="feature" id="first-time">
-          <h2><i data-lucide="sparkles" class="icon"></i> First time?</h2>
+        <div class="split-media">
+          <img src="img/brass.jpg" alt="An industrial economic board game in full swing at SLBG" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== First Time ===== -->
+    <section class="section" id="first-time" aria-labelledby="first-time-heading">
+      <div class="section-inner split split-reverse">
+        <div class="split-copy">
+          <p class="eyebrow">First time?</p>
+          <h2 id="first-time-heading">Just turn up and we'll do the rest</h2>
           <p>Members don't need to bring anything. Plenty of our members bring games and are happy to teach. As long
             as you have some enthusiasm and interest, that's all that's necessary.</p>
           <p>Just turn up on a Tuesday evening and we'll help you find a game to sit down with. There's no need to
             pre-organise anything. We play a wide variety of games of different weights to suit a range of players in a
             friendly atmosphere.</p>
         </div>
+        <div class="split-media">
+          <img src="img/edora.jpg" alt="A colourful strategy board game mid-play at SLBG" loading="lazy">
+        </div>
       </div>
     </section>
 
     <!-- ===== Gallery ===== -->
-    <section class="band band-tint" aria-labelledby="gallery-heading">
-      <div class="band-inner">
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow-center">Gallery</p>
         <h2 id="gallery-heading" class="section-title">Game nights in action</h2>
         <div class="gallery">
-          <img class="gallery-img" alt="Board game night at South Leeds Board Gamers" src="./img/slide_1.jpeg" loading="lazy">
-          <img class="gallery-img" alt="A colourful strategy board game mid-play at SLBG" src="./img/edora.jpg" loading="lazy">
-          <img class="gallery-img" alt="An industrial economic board game in full swing at SLBG" src="./img/brass.jpg" loading="lazy">
           <img class="gallery-img" alt="Players enjoying board games at our weekly meetup" src="./img/slide_2.jpeg" loading="lazy">
           <img class="gallery-img" alt="A detailed Euro-style board game in progress" src="./img/game.jpg" loading="lazy">
           <img class="gallery-img" alt="Players around a space-themed card game at SLBG" src="./img/club.jpg" loading="lazy">
@@ -135,36 +153,97 @@
     </section>
 
     <!-- ===== Get Involved ===== -->
-    <section class="band" id="involved" aria-labelledby="involved-heading">
-      <div class="band-inner narrow">
-        <h2 id="involved-heading" class="section-title"><i data-lucide="dices" class="icon"></i> Get involved</h2>
-        <p>Our weekly game night is <b>free to attend</b> and runs from <b>7pm to 11pm, every Tuesday</b> at
-          Bruntcliffe Working Men's Club in Morley. The venue has both parking and a bar serving drinks, plus a
-          takeaway round the corner if you get hungry.</p>
-        <p>We also run regular all-day game-day events, pulling in gamers from across the region. With upwards of
-          100+ attendees, our game day events are not to be missed.</p>
-        <p>The best way to keep up to date is to <a href="https://www.facebook.com/groups/southleedsboardgamers"
-            target="_blank" rel="noopener">join our Facebook Group</a> for regular news and events. You can also <a
-            href="https://boardgamegeek.com/guild/3919" target="_blank" rel="noopener">join our guild</a> over on
-          BoardGameGeek and check out members' collections, or if you just fancy a chat, <a
-            href="https://discord.gg/vEvyCPNguJ" target="_blank" rel="noopener">join us on Discord.</a></p>
+    <section class="section" id="involved" aria-labelledby="involved-heading">
+      <div class="section-inner split">
+        <div class="split-copy">
+          <p class="eyebrow">Get involved</p>
+          <h2 id="involved-heading">Free to attend, every single week</h2>
+          <p>Our weekly game night is <b>free to attend</b> and runs from <b>7pm to 11pm, every Tuesday</b> at
+            Bruntcliffe Working Men's Club in Morley. The venue has both parking and a bar serving drinks, plus a
+            takeaway round the corner if you get hungry.</p>
+          <p>We also run regular all-day game-day events, pulling in gamers from across the region. With upwards of
+            100+ attendees, our game day events are not to be missed.</p>
+        </div>
+        <div class="split-media">
+          <div class="link-cards">
+            <a class="link-card" href="https://www.facebook.com/groups/southleedsboardgamers" target="_blank" rel="noopener">
+              <img src="./img/facebook.png" alt="" aria-hidden="true">
+              <span><strong>Facebook Group</strong>Regular news and events, the best way to keep up to date</span>
+            </a>
+            <a class="link-card" href="https://boardgamegeek.com/guild/3919" target="_blank" rel="noopener">
+              <img src="./img/bgg.jpg" alt="" aria-hidden="true">
+              <span><strong>BoardGameGeek Guild</strong>Join our guild and browse members' collections</span>
+            </a>
+            <a class="link-card" href="https://discord.gg/vEvyCPNguJ" target="_blank" rel="noopener">
+              <img src="./img/discord.png" alt="" aria-hidden="true">
+              <span><strong>Discord</strong>Fancy a chat between game nights? Come say hello</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ===== Find Us ===== -->
-    <section class="band band-tint" id="find-us" aria-labelledby="find-heading">
-      <div class="band-inner find-grid">
-        <div class="map_wrapper">
-          <iframe title="Map to Bruntcliffe Working Men's Club"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.550001490726!2d-1.625848683453437!3d53.74408898006431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795fc4401f7633%3A0x7719bf030ecbaf91!2sBruntcliffe%20Working%20Mens%20Club!5e0!3m2!1sen!2suk!4v1626277584187!5m2!1sen!2suk"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="find-details">
-          <h2 id="find-heading"><i data-lucide="map-pin" class="icon"></i> Find us</h2>
+    <section class="section" id="find-us" aria-labelledby="find-heading">
+      <div class="section-inner split">
+        <div class="split-copy">
+          <p class="eyebrow">Find us</p>
+          <h2 id="find-heading">Bruntcliffe Working Men's Club</h2>
           <p><b>When:</b><br>Every Tuesday, 7pm – 11pm</p>
           <p><b>Address:</b><br>
             Bruntcliffe Working Men's Club<br>Bruntcliffe Road<br>Morley<br>Leeds<br>LS27 0LQ</p>
           <p><a href="https://w3w.co/moon.smart.offers" target="_blank" rel="noopener">///moon.smart.offers</a></p>
+        </div>
+        <div class="split-media">
+          <div class="map_wrapper">
+            <iframe title="Map to Bruntcliffe Working Men's Club"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.550001490726!2d-1.625848683453437!3d53.74408898006431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795fc4401f7633%3A0x7719bf030ecbaf91!2sBruntcliffe%20Working%20Mens%20Club!5e0!3m2!1sen!2suk!4v1626277584187!5m2!1sen!2suk"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow-center">FAQ</p>
+        <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need to book or sign up in advance?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>No. There's no need to pre-organise anything, just turn up on a Tuesday evening between 7pm and 11pm
+              and we'll help you find a game to sit down with.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much does it cost?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Nothing! Our weekly game night is free to attend and there are no membership fees.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to bring my own games?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Not at all. Plenty of our members bring games from their own collections, so you can just turn up and
+              play. You're always welcome to bring your own games too, the choice is yours!</p>
+          </details>
+          <details class="faq-item">
+            <summary>I'm new to board games, will someone teach me?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Yes! Our members are happy to teach. We play a wide variety of games of different weights to suit a
+              range of players, so as long as you have some enthusiasm and interest, that's all that's necessary.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What kind of games do you play?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Everything from euro to war games and anything in-between. If you're familiar with the likes of Catan
+              and Ticket to Ride, or indeed heavier games, you'll fit right in.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there an age limit?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Yes, game nights are for adults aged 18 and over, as we prefer to keep the club an adult
+              environment.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there parking, food and drink?<i data-lucide="chevron-down" class="icon"></i></summary>
+            <p>Yes, the venue has parking and a bar serving drinks, plus there's a takeaway round the corner if you
+              get hungry.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -183,6 +262,7 @@
         <a href="#involved">Get Involved</a>
         <a href="#first-time">First Time</a>
         <a href="#find-us">Find Us</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="footer-links">
         <h3>Connect</h3>
@@ -290,6 +370,72 @@
       "description": "Free weekly board game night - all experience levels welcome",
       "isAccessibleForFree": true
     }
+  }
+  </script>
+
+  <!-- Structured Data for FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to book or sign up in advance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. There's no need to pre-organise anything, just turn up on a Tuesday evening between 7pm and 11pm and we'll help you find a game to sit down with."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing! Our weekly game night is free to attend and there are no membership fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to bring my own games?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. Plenty of our members bring games from their own collections, so you can just turn up and play. You're always welcome to bring your own games too, the choice is yours!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I'm new to board games, will someone teach me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Our members are happy to teach. We play a wide variety of games of different weights to suit a range of players, so as long as you have some enthusiasm and interest, that's all that's necessary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kind of games do you play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everything from euro to war games and anything in-between. If you're familiar with the likes of Catan and Ticket to Ride, or indeed heavier games, you'll fit right in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there an age limit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, game nights are for adults aged 18 and over, as we prefer to keep the club an adult environment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there parking, food and drink?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the venue has parking and a bar serving drinks, plus there's a takeaway round the corner if you get hungry."
+        }
+      }
+    ]
   }
   </script>
 </body>
