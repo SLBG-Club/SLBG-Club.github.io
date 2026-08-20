@@ -14,6 +14,7 @@
   --shadow-md: 0 6px 20px rgba(20, 40, 50, 0.08), 0 2px 6px rgba(20, 40, 50, 0.05);
   --shadow-lg: 0 14px 40px rgba(20, 40, 50, 0.14);
   --maxw: 1160px;
+  --gutter: clamp(1.25rem, 5vw, 2.5rem);
   --nav-h: 68px;
   --body-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -130,10 +131,10 @@ button:focus-visible {
 }
 
 .nav-inner {
-  max-width: var(--maxw);
+  max-width: calc(var(--maxw) + 2 * var(--gutter));
   height: 100%;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 2rem);
+  padding: 0 var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,7 +146,7 @@ button:focus-visible {
   gap: 0.6rem;
   text-decoration: none;
   color: var(--heading);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.015em;
   font-size: 1.05rem;
   line-height: 1.15;
@@ -168,7 +169,7 @@ button:focus-visible {
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.5rem 0.85rem;
-  border-radius: 999px;
+  border-radius: 8px;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
@@ -206,7 +207,7 @@ button:focus-visible {
 /* ===== Section scaffolding ===== */
 .section,
 .hero {
-  padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 2.5rem);
+  padding: clamp(4rem, 9vw, 7rem) var(--gutter);
 }
 
 .section-inner {
@@ -337,7 +338,7 @@ button:focus-visible {
   text-decoration: none;
   font-weight: 700;
   padding: 0.9rem 1.9rem;
-  border-radius: 999px;
+  border-radius: 8px;
   font-size: 1rem;
   transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
@@ -372,7 +373,7 @@ button:focus-visible {
 .stats {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+  padding: 0 var(--gutter);
 }
 
 .stats-inner {
@@ -541,9 +542,9 @@ button:focus-visible {
 }
 
 .footer-inner {
-  max-width: var(--maxw);
+  max-width: calc(var(--maxw) + 2 * var(--gutter));
   margin: 0 auto;
-  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 2.5rem) 2rem;
+  padding: clamp(2.5rem, 5vw, 3.5rem) var(--gutter) 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
