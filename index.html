@@ -53,7 +53,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -69,8 +69,28 @@
           class="nav-brand"
           aria-label="South Leeds Board Gamers home"
         >
-          <img src="img/icon.png" alt="South Leeds Board Gamers Logo" />
-          <span>South Leeds Board Gamers</span>
+          <svg
+            class="logo-die"
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path class="body" d="M40.5,13.5 Q50,8 59.5,13.5 L76.5,23.5 Q86,29 86.0,40.0 L86.0,60.0 Q86,71 76.5,76.5 L59.5,86.5 Q50,92 40.5,86.5 L23.5,76.5 Q14,71 14.0,60.0 L14.0,40.0 Q14,29 23.5,23.5 L40.5,13.5 Z" />
+            <path class="edges" d="M18.1,31.4 L50,50 L81.9,31.4 M50,50 L50,87.2" />
+            <g transform="translate(50 29) matrix(0.866 0.5 -0.866 0.5 0 0)">
+              <text y="9" font-size="26">S</text>
+            </g>
+            <g transform="translate(32 60.5) matrix(0.866 0.5 0 1 0 0)">
+              <text y="9" font-size="26">L</text>
+            </g>
+            <g transform="translate(68 60.5) matrix(0.866 -0.5 0 1 0 0)">
+              <text y="8" font-size="22" letter-spacing="-1">BG</text>
+            </g>
+          </svg>
+          <span class="wordmark" aria-hidden="true">
+            <span>South Leeds</span>
+            <span>Board Gamers</span>
+          </span>
         </a>
         <button
           class="nav-toggle"
@@ -80,20 +100,21 @@
         >
           <span></span><span></span><span></span>
         </button>
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#involved">Get Involved</a>
-          <a href="#first-time">First Time</a>
-          <a href="#find-us">Find Us</a>
-          <a href="#faq">FAQ</a>
-          <a
-            href="https://www.facebook.com/groups/southleedsboardgamers"
-            target="_blank"
-            rel="noopener"
-            class="nav-cta"
-            >Join Us</a
-          >
-        </nav>
+        <div class="nav-drawer">
+          <nav class="nav-links" id="nav-links" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#involved">Get Involved</a>
+            <a href="#first-time">First Time</a>
+            <a href="#find-us">Find Us</a>
+            <a href="#faq">FAQ</a>
+            <a
+              href="https://www.facebook.com/groups/southleedsboardgamers"
+              target="_blank"
+              rel="noopener"
+              >Join Us</a
+            >
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -102,79 +123,50 @@
 
       <!-- ===== Hero ===== -->
       <section class="hero" aria-labelledby="hero-heading">
-        <div class="section-inner split">
-          <div class="split-copy">
-            <p class="eyebrow">
-              <i data-lucide="calendar-days" class="icon"></i> Every Tuesday ·
-              Morley, Leeds
-            </p>
+        <div class="section-inner hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Est. 2021</p>
             <h1 id="hero-heading">
               Leeds' friendliest
               <span class="accent">board&nbsp;game club</span>
             </h1>
             <p class="hero-sub">
-              Free weekly game nights in Morley. All games, all experience
-              levels, all welcome.
-            </p>
-            <p class="hero-event">
-              Next game night:
-              <strong><span id="next_tuesday"></span>, 7pm–11pm</strong>
+              We're a group of board game hobbyists who meet every Tuesday in
+              Morley, Leeds, from 7pm to 11pm. It's free to come along, and
+              newcomers are always welcome.
             </p>
             <div class="hero-actions">
               <a href="#find-us" class="btn btn-primary">Find us</a>
-              <div class="hero-social">
-                <a
-                  href="https://www.facebook.com/groups/southleedsboardgamers"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Facebook group"
-                  ><img alt="Facebook Icon" src="./img/facebook.png"
-                /></a>
-                <a
-                  href="https://boardgamegeek.com/guild/3919"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="BoardGameGeek guild"
-                  ><img alt="BoardGameGeek Icon" src="./img/bgg.jpg"
-                /></a>
-                <a
-                  href="https://discord.gg/vEvyCPNguJ"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Discord server"
-                  ><img alt="Discord Icon" src="./img/discord.png"
-                /></a>
-              </div>
+              <a href="#first-time" class="btn btn-outline">First time?</a>
             </div>
+            <p class="hero-next">
+              <i data-lucide="calendar-days" class="icon"></i>
+              Next game night:
+              <strong><span id="next_tuesday"></span>, 7pm</strong>
+            </p>
           </div>
-          <div class="split-media">
+          <div class="hero-media" aria-label="Photos from our game nights">
             <img
+              class="hero-photo hero-photo-1"
               src="img/slide_1.jpeg"
               alt="Members playing board games at a South Leeds Board Gamers game night"
               fetchpriority="high"
             />
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Stats strip ===== -->
-      <section class="stats" aria-label="Club highlights">
-        <div class="section-inner stats-inner">
-          <div class="stat">
-            <span class="stat-num">Weekly</span
-            ><span class="stat-label">Every Tuesday night</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">7–11pm</span
-            ><span class="stat-label">Doors from 7pm</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">Free</span
-            ><span class="stat-label">No membership fees</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">Est. 2021</span
-            ><span class="stat-label">Morley, Leeds</span>
+            <img
+              class="hero-photo hero-photo-2"
+              src="img/seti.jpg"
+              alt="A board game mid-play on the table"
+            />
+            <img
+              class="hero-photo hero-photo-3"
+              src="img/club.jpg"
+              alt="Players around a table mid-game at game night"
+            />
+            <img
+              class="hero-photo hero-photo-4"
+              src="img/game.jpg"
+              alt="Close-up of a board game in progress"
+            />
           </div>
         </div>
       </section>
@@ -246,8 +238,8 @@
       <!-- ===== Gallery ===== -->
       <section class="section" aria-labelledby="gallery-heading">
         <div class="section-inner">
-          <p class="eyebrow eyebrow-center">Gallery</p>
-          <h2 id="gallery-heading" class="section-title">
+          <p class="eyebrow">Gallery</p>
+          <h2 id="gallery-heading" class="section-title-left">
             Game nights in action
           </h2>
           <div class="gallery">
@@ -496,7 +488,24 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="img/icon.png" alt="South Leeds Board Gamers Logo" />
+          <svg
+            class="logo-die footer-die"
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path class="body" d="M40.5,13.5 Q50,8 59.5,13.5 L76.5,23.5 Q86,29 86.0,40.0 L86.0,60.0 Q86,71 76.5,76.5 L59.5,86.5 Q50,92 40.5,86.5 L23.5,76.5 Q14,71 14.0,60.0 L14.0,40.0 Q14,29 23.5,23.5 L40.5,13.5 Z" />
+            <path class="edges" d="M18.1,31.4 L50,50 L81.9,31.4 M50,50 L50,87.2" />
+            <g transform="translate(50 29) matrix(0.866 0.5 -0.866 0.5 0 0)">
+              <text y="9" font-size="26">S</text>
+            </g>
+            <g transform="translate(32 60.5) matrix(0.866 0.5 0 1 0 0)">
+              <text y="9" font-size="26">L</text>
+            </g>
+            <g transform="translate(68 60.5) matrix(0.866 -0.5 0 1 0 0)">
+              <text y="8" font-size="22" letter-spacing="-1">BG</text>
+            </g>
+          </svg>
           <p>
             Leeds' No.1 board game group, meeting every week in Morley since
             2021.
