@@ -449,9 +449,12 @@ button:focus-visible {
   contain: size;
 }
 
+/* Stretch to the grid row rather than height: 100%, which older Safari
+   resolves against the whole collage, overlapping the two rows */
 .hero-photo {
   width: 100%;
-  height: 100%;
+  height: auto;
+  align-self: stretch;
   min-height: 0;
   object-fit: cover;
   border-radius: var(--radius);
