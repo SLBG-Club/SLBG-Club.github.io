@@ -32,3 +32,5 @@ node_modules/
 *.tmp
 *.temp
 .cache/
+# Social media graphics (kept locally, not part of the site)
+social/
