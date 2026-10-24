@@ -296,32 +296,6 @@ button:focus-visible {
   background: var(--tint);
 }
 
-/* Tinted sections get a subtle scatter of dice, meeples, cards and tiles
-   (seamless 640x520 tile) */
-.hero,
-.section-tint {
-  position: relative;
-}
-
-.hero::before,
-.section-tint::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='520' viewBox='0 0 640 520'%3E%3Cg fill='none' stroke='%231f1f1d' stroke-width='2' stroke-linejoin='round' opacity='.14'%3E%3Cg transform='translate(356 183) rotate(9)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(259 260) rotate(13)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Cpath d='M0-10 11 8h-22zM0-10v-11M11 8l7 2.5M-11 8l-7 2.5M0-10 18-10.5M0-10-18-10.5M11 8 0 21M-11 8 0 21'/%3E%3C/g%3E%3Cg transform='translate(330 78) rotate(-4)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Ccircle r='7'/%3E%3C/g%3E%3Cg transform='translate(105 65) rotate(-7)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(484 344) rotate(10)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Cpath d='M0-10 11 8h-22zM0-10v-11M11 8l7 2.5M-11 8l-7 2.5M0-10 18-10.5M0-10-18-10.5M11 8 0 21M-11 8 0 21'/%3E%3C/g%3E%3Cg transform='translate(231 91) rotate(-7)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(230 -9) rotate(-10)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(230 511) rotate(-10)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(527 128) rotate(-22)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(128 302) rotate(15)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(332 313) rotate(-17)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(244 387) rotate(-9)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(48 6) rotate(-19)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(48 526) rotate(-19)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(518 11) rotate(32)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(518 531) rotate(32)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(148 162) rotate(12)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(117 453) rotate(2)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(-10 235) rotate(14)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(630 235) rotate(14)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(350 412) rotate(-4)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(396 6) rotate(-21)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(396 526) rotate(-21)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(80 370) rotate(5)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(461 269) rotate(18)'%3E%3Crect x='-12' y='-21' width='24' height='42' rx='5'/%3E%3Cpath d='M-12 0h24'/%3E%3Ccircle cx='-5' cy='-15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='-6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='-10.5' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='6' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='5' cy='15' r='2.6' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(439 459) rotate(-17)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(33 134) rotate(10)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Cpath d='M0-10 11 8h-22zM0-10v-11M11 8l7 2.5M-11 8l-7 2.5M0-10 18-10.5M0-10-18-10.5M11 8 0 21M-11 8 0 21'/%3E%3C/g%3E%3Cg transform='translate(52 292) rotate(29)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Ccircle r='7'/%3E%3C/g%3E%3Cg transform='translate(586 67) rotate(15)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-9' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(544 443) rotate(10)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(551 296) rotate(30)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(-6 387) rotate(19)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(634 387) rotate(19)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(527 220) rotate(-8)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(304 474) rotate(-22)'%3E%3Crect x='-14' y='-20' width='28' height='40' rx='5'/%3E%3Cpath d='M0-8 6 0 0 8-6 0z' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(-15 467) rotate(-26)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(625 467) rotate(-26)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(410 84) rotate(-8)'%3E%3Ccircle cy='-11' r='7'/%3E%3Cpath d='M-5-4C-5 4-11 8-12 17h24C11 8 5 4 5-4'/%3E%3C/g%3E%3Cg transform='translate(280 172) rotate(-21)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(404 348) rotate(-15)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Ccircle r='7'/%3E%3C/g%3E%3Cg transform='translate(443 182) rotate(-21)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(66 204) rotate(-6)'%3E%3Crect x='-20' y='-20' width='40' height='40' rx='9'/%3E%3Ccircle cx='-9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='-9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='0' cy='0' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='-9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='3.2' fill='%231f1f1d' stroke='none'/%3E%3C/g%3E%3Cg transform='translate(594 167) rotate(-1)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Ccircle r='7'/%3E%3C/g%3E%3Cg transform='translate(162 388) rotate(-15)'%3E%3Cpath d='M0-21 18-10.5v21L0 21-18 10.5v-21z'/%3E%3Cpath d='M0-10 11 8h-22zM0-10v-11M11 8l7 2.5M-11 8l-7 2.5M0-10 18-10.5M0-10-18-10.5M11 8 0 21M-11 8 0 21'/%3E%3C/g%3E%3Cg transform='translate(152 2) rotate(-11)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3Cg transform='translate(152 522) rotate(-11)'%3E%3Cpath d='M0-20C-4.5-20-7-16.5-7-13-7-12-6.9-11-6.6-10L-16.5-6C-19.5-4.8-20.5-2.5-20-.8-19.5 1-18 1.6-16.5 1.6H-10.5L-17.6 16.5C-18.6 18.6-17.6 20-15.6 20H-6.5C-5.6 20-5 19.6-4.5 18.8L0 11.7 4.5 18.8C5 19.6 5.6 20 6.5 20H15.6C17.6 20 18.6 18.6 17.6 16.5L10.5 1.6H16.5C18 1.6 19.5 1 20-.8 20.5-2.5 19.5-4.8 16.5-6L6.6-10C6.9-11 7-12 7-13 7-16.5 4.5-20 0-20Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
-.hero::before,
-.section-tint::before {
-  opacity: 0.6;
-}
-
-.hero .section-inner,
-.section-tint .section-inner {
-  position: relative;
-}
-
 .section h2 {
   color: var(--heading);
   font-size: clamp(1.9rem, 4vw, 2.8rem);
@@ -363,41 +337,100 @@ button:focus-visible {
 }
 
 /* ===== Hero ===== */
+/* Full-width photo with a dark gradient rising from the bottom,
+   copy sits on top of it */
 .hero {
-  padding-top: clamp(3rem, 7vw, 5.5rem);
-  padding-bottom: clamp(3rem, 7vw, 5.5rem);
-  background: var(--tint);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(72vh, 620px);
+  padding-top: clamp(6rem, 11vw, 9rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+  background: var(--heading);
+  color: rgba(255, 255, 255, 0.86);
   overflow: hidden;
 }
 
-/* Fainter behind the hero copy */
-.hero::before {
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), #000);
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), #000);
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to top,
+    rgba(22, 20, 17, 0.91) 0%,
+    rgba(22, 20, 17, 0.78) 35%,
+    rgba(22, 20, 17, 0.47) 60%,
+    rgba(22, 20, 17, 0.06) 88%
+  );
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: stretch;
+  width: 100%;
+}
+
+.hero-copy {
+  max-width: 40rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero h1 {
+  color: #fff;
   font-size: clamp(2.5rem, 5.5vw, 4rem);
   line-height: 1.12;
   letter-spacing: -0.01em;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem;
   text-wrap: balance;
 }
 
-.hero h1 .accent {
-  color: var(--accent-display);
+.hero h1 .hand {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.05em;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 0.8;
+  letter-spacing: 0;
+  color: var(--accent-light);
+  transform: rotate(-3deg);
+}
+
+/* Hand-drawn underline that draws itself in on load */
+.hero h1 .hand::after {
+  content: "";
+  position: absolute;
+  left: -3%;
+  right: -3%;
+  bottom: -0.16em;
+  height: 0.24em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23e3a93c' stroke-linecap='round'%3E%3Cpath d='M3 12C50 5 120 3 197 8' stroke-width='4'/%3E%3Cpath d='M24 17C80 12 140 11 182 14' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat center / 100% 100%;
+  clip-path: inset(0 100% 0 0);
+  animation: hand-underline 0.7s 0.5s ease-out forwards;
+}
+
+@keyframes hand-underline {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .hero-sub {
-  font-size: clamp(1.15rem, 2vw, 1.3rem);
-  max-width: 40ch;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  max-width: 46ch;
   margin: 0 0 2rem;
 }
 
@@ -435,15 +468,18 @@ button:focus-visible {
   align-items: center;
   min-width: 3.25rem;
   padding: 0.45rem 0.4rem 0.4rem;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   font-size: 0.66rem;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: none;
 }
 
 .countdown-unit b {
@@ -451,8 +487,8 @@ button:focus-visible {
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: 0;
-  color: var(--heading);
   font-variant-numeric: tabular-nums;
+  color: #fff;
 }
 
 .hero-next-text {
@@ -464,55 +500,38 @@ button:focus-visible {
 }
 
 .hero-next-text strong {
-  color: var(--heading);
+  color: #fff;
   font-weight: 700;
 }
 
 .hero-next-text span {
   font-size: 0.85rem;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.72);
 }
 
-/* Photo collage: 3 columns x 2 rows, wide tile top-left and bottom-right.
-   Size containment lets it stretch to the height of the copy beside it. */
-.hero-media {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  contain: size;
+/* Hero buttons sit on the dark photo */
+.hero .btn {
+  text-shadow: none;
 }
 
-/* Stretch to the grid row rather than height: 100%, which older Safari
-   resolves against the whole collage, overlapping the two rows */
-.hero-photo {
-  width: 100%;
-  height: auto;
-  align-self: stretch;
-  min-height: 0;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
+.hero .btn-primary {
+  background: var(--accent);
+  color: var(--heading);
 }
 
-.hero-photo-1 {
-  grid-column: 1 / 3;
-  grid-row: 1;
+.hero .btn-primary:hover {
+  background: var(--accent-light);
+  color: var(--heading);
 }
 
-.hero-photo-2 {
-  grid-column: 3;
-  grid-row: 1;
+.hero .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
 }
 
-.hero-photo-3 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.hero-photo-4 {
-  grid-column: 2 / 4;
-  grid-row: 2;
+.hero .btn-outline:hover {
+  background: #fff;
+  color: var(--heading);
 }
 
 .btn {
@@ -884,15 +903,28 @@ button:focus-visible {
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+  /* Copy takes up more of the photo on narrow screens, so the
+     gradient climbs higher */
+  .hero {
+    min-height: 0;
+    padding-top: 9rem;
   }
 
-  .hero-media {
-    contain: none;
-    aspect-ratio: 4 / 3;
-    gap: 0.5rem;
+  /* Photo is cropped at the sides here, so zoom in from the bottom
+     to lose some of the ceiling */
+  .hero-bg {
+    top: auto;
+    height: 140%;
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      to top,
+      rgba(22, 20, 17, 0.93) 0%,
+      rgba(22, 20, 17, 0.85) 45%,
+      rgba(22, 20, 17, 0.45) 72%,
+      rgba(22, 20, 17, 0) 92%
+    );
   }
 
   .split {
