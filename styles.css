@@ -264,6 +264,30 @@ button:focus-visible {
   color: var(--accent-dark);
 }
 
+/* Facebook group link, styled as an outbound Facebook button */
+.nav-links .nav-facebook {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: #166fe5;
+  color: #fff;
+  border-radius: var(--radius-sm);
+}
+
+.nav-links .nav-facebook:hover {
+  background: #1360c6;
+  color: #fff;
+}
+
+.nav-facebook-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -290,10 +314,6 @@ button:focus-visible {
 .section-inner {
   max-width: var(--maxw);
   margin: 0 auto;
-}
-
-.section-tint {
-  background: var(--tint);
 }
 
 .section h2 {
@@ -337,113 +357,74 @@ button:focus-visible {
 }
 
 /* ===== Hero ===== */
-/* Full-width photo with a dark gradient rising from the bottom,
-   copy sits on top of it */
+/* Photo fills the right side and fades into the background
+   behind the copy */
 .hero {
   position: relative;
   isolation: isolate;
-  display: flex;
-  align-items: flex-end;
-  min-height: min(72vh, 620px);
-  padding-top: clamp(6rem, 11vw, 9rem);
-  padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
-  background: var(--heading);
-  color: rgba(255, 255, 255, 0.86);
   overflow: hidden;
+  background: var(--bg);
 }
 
+/* Taller than the hero and anchored to the bottom, so the ceiling
+   and stage at the top of the photo are cropped off */
 .hero-bg {
   position: absolute;
-  inset: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
+  right: -8%;
+  bottom: 0;
   z-index: -1;
-  background: linear-gradient(
-    to top,
-    rgba(22, 20, 17, 0.91) 0%,
-    rgba(22, 20, 17, 0.78) 35%,
-    rgba(22, 20, 17, 0.47) 60%,
-    rgba(22, 20, 17, 0.06) 88%
+  width: 64%;
+  height: 125%;
+  object-fit: cover;
+  object-position: 30% 100%;
+  filter: saturate(1.15);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0.55) 40%,
+    #000 65%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0.55) 40%,
+    #000 65%
   );
 }
 
-.hero-inner {
-  width: 100%;
+/* Fade the bottom of the photo into the next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--bg));
+  pointer-events: none;
 }
 
+/* Keep the copy clear of the photo as the screen narrows */
 .hero-copy {
-  max-width: 40rem;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+  max-width: min(32rem, 44vw);
 }
 
 .hero h1 {
-  color: #fff;
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  color: var(--heading);
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
   margin: 0 0 1.25rem;
   text-wrap: balance;
 }
 
-.hero h1 .hand {
-  position: relative;
-  display: inline-block;
-  margin-left: 0.05em;
-  font-family: "Caveat", cursive;
-  font-weight: 700;
-  font-size: 1.3em;
-  line-height: 0.8;
-  letter-spacing: 0;
-  color: var(--accent-light);
-  transform: rotate(-3deg);
-}
-
-/* Hand-drawn underline that draws itself in on load */
-.hero h1 .hand::after {
-  content: "";
-  position: absolute;
-  left: -3%;
-  right: -3%;
-  bottom: -0.16em;
-  height: 0.24em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23e3a93c' stroke-linecap='round'%3E%3Cpath d='M3 12C50 5 120 3 197 8' stroke-width='4'/%3E%3Cpath d='M24 17C80 12 140 11 182 14' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E")
-    no-repeat center / 100% 100%;
-  clip-path: inset(0 100% 0 0);
-  animation: hand-underline 0.7s 0.5s ease-out forwards;
-}
-
-@keyframes hand-underline {
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 .hero-sub {
-  color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.1rem, 2vw, 1.25rem);
   max-width: 46ch;
   margin: 0 0 2rem;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.75rem;
-}
-
-.hero-actions .btn {
-  min-width: 10rem;
 }
 
 .hero-next {
@@ -468,18 +449,15 @@ button:focus-visible {
   align-items: center;
   min-width: 3.25rem;
   padding: 0.45rem 0.4rem 0.4rem;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
   font-size: 0.66rem;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: none;
+  color: var(--text-soft);
 }
 
 .countdown-unit b {
@@ -488,7 +466,7 @@ button:focus-visible {
   line-height: 1.15;
   letter-spacing: 0;
   font-variant-numeric: tabular-nums;
-  color: #fff;
+  color: var(--heading);
 }
 
 .hero-next-text {
@@ -500,38 +478,13 @@ button:focus-visible {
 }
 
 .hero-next-text strong {
-  color: #fff;
+  color: var(--heading);
   font-weight: 700;
 }
 
 .hero-next-text span {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-/* Hero buttons sit on the dark photo */
-.hero .btn {
-  text-shadow: none;
-}
-
-.hero .btn-primary {
-  background: var(--accent);
-  color: var(--heading);
-}
-
-.hero .btn-primary:hover {
-  background: var(--accent-light);
-  color: var(--heading);
-}
-
-.hero .btn-outline {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
-.hero .btn-outline:hover {
-  background: #fff;
-  color: var(--heading);
+  color: var(--text-soft);
 }
 
 .btn {
@@ -695,24 +648,15 @@ button:focus-visible {
   padding: 1.15rem 1.35rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-bottom: 3px solid #e0d8ca;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   text-decoration: none;
   color: var(--text-soft);
   font-weight: 500;
-  transition: border-color 0.2s ease;
 }
 
 .link-card:hover {
-  border-color: #d9d0c0;
-  border-bottom-color: #bfb29b;
   color: var(--text-soft);
-}
-
-.link-card:active {
-  border-bottom-width: 1px;
-  margin-top: 2px;
 }
 
 .link-card img {
@@ -721,6 +665,12 @@ button:focus-visible {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Ring around the icon on hover, matching the footer icons */
+.link-card:hover img {
+  box-shadow: 0 0 0 3px rgba(31, 31, 29, 0.15);
 }
 
 .link-card span {
@@ -747,6 +697,7 @@ button:focus-visible {
 
 .faq-item {
   background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   padding: 0 1.25rem;
@@ -903,28 +854,41 @@ button:focus-visible {
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
-  /* Copy takes up more of the photo on narrow screens, so the
-     gradient climbs higher */
+  /* Hero fills the screen below the nav. The photo sits on top,
+     grows to take up any spare height and fades down into the copy */
   .hero {
-    min-height: 0;
-    padding-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--nav-h));
+    min-height: calc(100svh - var(--nav-h));
+    padding-top: 0;
+    padding-bottom: 2.5rem;
   }
 
-  /* Photo is cropped at the sides here, so zoom in from the bottom
-     to lose some of the ceiling */
+  .hero .section-inner {
+    width: 100%;
+  }
+
   .hero-bg {
-    top: auto;
-    height: 140%;
+    position: relative;
+    right: auto;
+    display: block;
+    flex: 1 1 0;
+    width: calc(100% + 2 * var(--gutter));
+    height: auto;
+    min-height: 200px;
+    object-position: 40% 70%;
+    margin: 0 calc(-1 * var(--gutter)) -3rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  }
+
+  .hero-copy {
+    max-width: none;
   }
 
   .hero::after {
-    background: linear-gradient(
-      to top,
-      rgba(22, 20, 17, 0.93) 0%,
-      rgba(22, 20, 17, 0.85) 45%,
-      rgba(22, 20, 17, 0.45) 72%,
-      rgba(22, 20, 17, 0) 92%
-    );
+    display: none;
   }
 
   .split {
@@ -996,8 +960,9 @@ button:focus-visible {
     border-radius: var(--radius-sm);
   }
 
-  .hero-actions .btn {
-    flex: 1;
+  .nav-links .nav-facebook {
+    justify-content: center;
+    margin: 0.4rem 0 0;
   }
 
   .footer-inner {
